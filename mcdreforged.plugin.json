@@ -7,7 +7,8 @@
 		"zh_cn": "多槽位备份/回档插件"
 	},
 	"author": [
-		"Fallen_Breath"
+		"Fallen_Breath",
+		"pingvii1"
 	],
 	"link": "https://github.com/TISUnion/QuickBackupM",
 	"dependencies": {
