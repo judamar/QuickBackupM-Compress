@@ -401,8 +401,8 @@ def clean_up_slot_1():
 def create_backup(source: CommandSource, comment: Optional[str]):
 	_create_backup(source, comment)
 
-
-@single_op(tr('operations.create'))
+# TODO! hacer que el qb se guarde comprimido 
+@single_op(tr('operations.create')) 
 def _create_backup(source: CommandSource, comment: Optional[str]):
 	try:
 		print_message(source, tr('create_backup.start'), tell=False)
@@ -660,7 +660,7 @@ def register_command(server: PluginServerInterface):
 	)
 
 
-def load_config(server: ServerInterface, source: CommandSource or None = None):
+def load_config(server: ServerInterface, source: CommandSource or None = None): # type: ignore
 	global config
 	config = server_inst.load_config_simple(CONFIG_FILE, target_class=Configuration, in_data_folder=False, source_to_reply=source)
 	last = 0
